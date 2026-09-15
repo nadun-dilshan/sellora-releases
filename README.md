@@ -47,4 +47,4 @@ App එක තනියම update වෙනවා. Notifications ඕන නම�
 
 ## Help
 
-Questions or problems: support@botcalm.com
+Questions or problems: sellora.bot@gmail.com
