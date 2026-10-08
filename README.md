@@ -54,7 +54,7 @@ allowed for Sellora in your phone's settings.
 ## Need help?
 
 Use the Help & manual page in the Sellora web dashboard, or contact Sellora
-support at support@botcalm.com.
+support at sellora.bot@gmail.com.
 
 ---
 
