@@ -55,37 +55,3 @@ allowed for Sellora in your phone's settings.
 
 Use the Help & manual page in the Sellora web dashboard, or contact Sellora
 support at sellora.bot@gmail.com.
-
----
-
-## For maintainers
-
-Releases here are created automatically by the Mobile CI workflow in the main
-Sellora repository. Every merge to `main` that touches the mobile app builds a
-sideloadable APK on Expo (EAS, profile `production-apk`) and publishes it as a
-release in this repository, marked as the latest.
-
-- Tag format: `android-v<app version>-b<workflow run number>`, for example
-  `android-v1.0.1-b42`.
-- Asset name: `sellora-android.apk`. The "latest" download link above depends
-  on that exact name.
-- Release notes carry the source commit the build came from.
-- JavaScript-only changes ship to installed apps over the air through EAS
-  Update and do not create a release here. Native changes (new packages,
-  `app.json` native settings, Expo SDK upgrades) require a version bump in
-  `apps/mobile/app.json` and produce a new release.
-
-To publish manually, download the APK from expo.dev → Builds and run:
-
-```bash
-gh release create android-v<version>-b<n> sellora-android.apk \
-  --repo nadun-dilshan/sellora-releases \
-  --title "Sellora Android v<version> (build <n>)" \
-  --notes "Built from <commit>." \
-  --latest
-```
-
-The workflow needs the repository variable `RELEASES_REPO` set to
-`nadun-dilshan/sellora-releases` and the secret `RELEASES_TOKEN` with
-**Contents: read and write** on this repository. Keep this repository public,
-otherwise the download link will not work without a GitHub account.
